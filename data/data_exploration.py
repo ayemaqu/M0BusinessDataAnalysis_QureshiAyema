@@ -63,8 +63,37 @@ plt.title("Customer Segment distributation")
 #makes the pie chart a circle
 plt.axis('equal')
 #shows the chart
-plt.show()
+#plt.show()
 
 
 # another pie chart for the second loop
-# the percentage of each category : the segment types that purchased0, abonded the cart1, and 
+# the percentage of each category : the segment types that purchased0, abonded the cart1, and untargeted
+# Set up counters for each category
+purchased = 0
+inactive = 0
+abandoned = 0
+
+for index, row in df.iterrows():
+    added = row['Confirmed_Added_Items']
+    confirmed = row['Purchase_Confirmed']
+
+    if confirmed > 0 and added > 0:
+        purchased += 1
+    elif confirmed == 0 and added > 0:
+        abandoned += 1
+    elif confirmed == 0 and added == 0:
+        inactive += 1
+
+print("Purchased:", purchased)
+print("Abandoned:", abandoned)
+print("Untarget:", inactive )
+
+values = [purchased, abandoned, inactive]
+labels = ['Purchased', 'Abandoned', 'Inactive']
+
+plt.figure(figsize=(6, 6))
+plt.pie(values, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.title("Customer Session Outcomes")
+plt.axis('equal')  
+plt.show()
+
