@@ -20,9 +20,25 @@ for index, row in df.iterrows():
     # use a if statement to check if that cart was abondened or not
     #if people added an item, BUT didn't checkout, print yes, otherwise no 
     if added_to_cart > 0 and confirmed_purchase == 0: 
-        print(f"Row {index}: Cart Abandoned → Yes")
+        print(f"Row " + str(index) + ": Cart Abandoned → Yes")
     else:
-        print(f"Row {index}: Cart Abandoned → No")
+        print(f"Row " + str(index) + ": Cart Abandoned → No")
+
+# maybe create a for loop to show which shows which type of cusotmers aboonded their carts, and which didnt. 
+for index, row in df.iterrows():
+    segment = row ['Customer_Segment_Type']
+    added = row['No_Items_Added_InCart']
+    confirmed = row['Purchase_Confirmed']
+ 
+    # if they added to cart and purchased, print "Purchased: #"
+    # if they added to cart, but abondened it, print "Abondened: "
+    # if they didnt add anything to cart, and didnt cehckout: "Untargeted"
+    if added > 0 and confirmed > 0:
+        print("Row " + str(index) + " | Segment: " + str(segment) + " → Purchased")
+    elif added > 0 and confirmed == 0:
+        print("Row " + str(index) + " | Segment: " + str(segment) + " → Abondened cart")
+    elif added == 0 and confirmed == 0:
+        print("Row " + str(index) + " | Segment: " + str(segment) + " → Inactive/Untargeted")
 
 # PIE CHART 
 # Count how many customers fall into each segment 'Customer_Segment_Type' 
@@ -48,3 +64,7 @@ plt.title("Customer Segment distributation")
 plt.axis('equal')
 #shows the chart
 plt.show()
+
+
+# another pie chart for the second loop
+# the percentage of each category : the segment types that purchased0, abonded the cart1, and 
