@@ -39,10 +39,19 @@ These changes allowed me to focus on whether a customer took action at all, rath
 
 - I then created a pie chart to visually show the distribution of customer types — Target, Loyal, and Untargeted — and how they behaved in terms of cart activity. To verify that my for loops were working correctly, I compared the Python output to the calculations I made in Excel. This helped me ensure that my custom logic (like counting added items or confirmed purchases) matched the actual values in the dataset.
 - I created two separate pie charts for different purposes:
-  - Graph 1: Shows the distribution of customer segments: `0 = Target, 1 = Loyal, 2 = Untargeted`
-  - Graph 2: Shows the outcome of the session: `Purchased, Abandoned, or Inactive`
+  - Graph 1(figure 1): Shows the distribution of customer segments: `0 = Target, 1 = Loyal, 2 = Untargeted`
+  - Graph 2(figure 2): Shows the outcome of the session: `Purchased, Abandoned, or Inactive`
     - The second graph is based on categories I created in Python using logic from the original columns. By checking whether customers added items and confirmed purchases, I was able to reclassify behavior to better analyze who completed the customer journey and who dropped off.
+<img width="270" alt="Screenshot" src="https://github.com/user-attachments/assets/eceb1938-5d09-4cf4-ade2-fca59d6cfa4e" />
+Figure 1
+<img width="270" alt="Screenshot" src="https://github.com/user-attachments/assets/58a6112d-898b-4355-af2c-353c39c5bde2" />
+Figure 2
 
 #### Data types:
 - The dataset contains both numeric and categorical data types. The numeric columns represent quantitative data, such as the number of items added to a cart, the number of pages viewed, or the number of checkout confirmations. These are discrete values because they represent counts — whole numbers, not continuous measurements.
 - At the same time, the dataset relies heavily on categorical (qualitative) data. For example, the `Customer_Segment_Type` column includes labels like Target, Loyal, and Untargeted, and new categories I created (such as Purchased, Abandoned, and Inactive) are also qualitative. These categories are important for grouping and interpreting customer behavior patterns. Because the analysis involves both numerical metrics and labeled categories, this dataset is a mix of quantitative and qualitative data types.
+
+#### Conclusion: 3 things I learned this Module 
+1. I learned how to work with real-world data and organize it in a way that supports meaningful analysis. I also realized how easy it is to “scope creep” when you're curious — I had to remind myself to stay focused on answering my specific business problem.
+2. If I had more time, I would explore creating additional graphs, and experiment with building new input columns directly in Excel. I’d like to connect those Excel inputs to Python to create visuals based on both tools.
+3. I learned how to use for loops in Python to iterate through rows and perform logic-based calculations. This helped me translate raw data into categories like “Purchased” or “Abandoned,” and gave me more control over the structure of my analysis.
