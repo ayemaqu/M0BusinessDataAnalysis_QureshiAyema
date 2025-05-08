@@ -24,7 +24,7 @@ for index, row in df.iterrows():
     else:
         print(f"Row " + str(index) + ": Cart Abandoned → No")
 
-# maybe create a for loop to show which shows which type of cusotmers aboonded their carts, and which didnt. 
+# create a for loop to show which shows which type of cusotmers aboonded their carts, and which didnt. 
 for index, row in df.iterrows():
     segment = row ['Customer_Segment_Type']
     added = row['No_Items_Added_InCart']
@@ -51,23 +51,20 @@ Customer_Segment_Type
 0    42
 2    14
 '''
-
 #Labels
 counts.index = ['Target', 'Loyal', 'Untargeted']
 #create the pie chart
 counts.plot(kind='pie',
             autopct='%1.1f%%',
             figsize=(6,6))
-#the title
 plt.title("Customer Segment distributation")
-#makes the pie chart a circle
+# Makes the pie chart a circle
 plt.axis('equal')
-#shows the chart
-#plt.show()
+plt.show()
 
 
 # another pie chart for the second loop
-# the percentage of each category : the segment types that purchased0, abonded the cart1, and untargeted
+# the percentage of each category : the segment types that purchased, abandoned the cart, and untargeted
 # Set up counters for each category
 purchased = 0
 inactive = 0
@@ -96,4 +93,3 @@ plt.pie(values, labels=labels, autopct='%1.1f%%', startangle=90)
 plt.title("Customer Session Outcomes")
 plt.axis('equal')  
 plt.show()
-
