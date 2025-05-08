@@ -42,9 +42,9 @@
   - Graph 1(figure 1): Shows the distribution of customer segments: `0 = Target, 1 = Loyal, 2 = Untargeted`
   - Graph 2(figure 2): Shows the outcome of the session: `Purchased, Abandoned, or Inactive`
     - The second graph is based on categories I created in Python using logic from the original columns. By checking whether customers added items and confirmed purchases, I was able to reclassify behavior to better analyze who completed the customer journey and who dropped off.
-<img width="270" alt="Screenshot" src="https://github.com/user-attachments/assets/eceb1938-5d09-4cf4-ade2-fca59d6cfa4e" />
+<img width="380" alt="Screenshot" src="https://github.com/user-attachments/assets/eceb1938-5d09-4cf4-ade2-fca59d6cfa4e" />
 Figure 1
-<img width="270" alt="Screenshot" src="https://github.com/user-attachments/assets/58a6112d-898b-4355-af2c-353c39c5bde2" />
+<img width="380" alt="Screenshot" src="https://github.com/user-attachments/assets/58a6112d-898b-4355-af2c-353c39c5bde2" />
 Figure 2
 
 #### Data types:
