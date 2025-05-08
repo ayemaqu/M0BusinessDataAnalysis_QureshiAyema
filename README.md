@@ -10,12 +10,12 @@
 - **Data collection:** The dataset used in this project was sourced from Ratul Ghosh’s Customer Cart Abandonment Analysis, which was publicly available on his GitHub repository. The data was already organized and cleaned, meaning it was structured and ready for analysis. Since it wasn’t raw or unprocessed, I was able to begin exploring and analyzing it immediately.
 - **Data processing:** There were some empty cells in the dataset, which I filled in with "NA" using Excel to ensure consistency. To improve reliability and usability, I also added a few custom columns. Since the dataset is session-based, I wanted to focus more on whether customers took key actions, rather than how many times they repeated them (like viewing pages or logging in), which I considered useful but not necessary for my specific analysis.
 
-Here are the columns I created:
-- `added_items` This column uses an `IF` statement to check if a customer added any items to their cart. I labeled the result as `"Yes"` or `"No"`.
-- `confirmed_added_items` While not essential, I created this column to help myself. It converts the `"Yes"/"No"` values from added_items into `1` and `0` so I could more easily calculate totals in a Pivot Table.
-- `confirmed_initiated` The original dataset included a column showing how many times each customer initiated a checkout. My new column simplifies that by flagging it with a `1` if they initiated checkout at least once, or `0` if they didn’t.
+- Here are the columns I created:
+  - `added_items` This column uses an `IF` statement to check if a customer added any items to their cart. I labeled the result as `"Yes"` or `"No"`.
+  - `confirmed_added_items` While not essential, I created this column to help myself. It converts the `"Yes"/"No"` values from added_items into `1` and `0` so I could more easily calculate totals in a Pivot Table.
+  - `confirmed_initiated` The original dataset included a column showing how many times each customer initiated a checkout. My new column simplifies that by flagging it with a `1` if they initiated checkout at least once, or `0` if they didn’t.
 
-These changes allowed me to focus on whether a customer took action at all, rather than how often — which aligned better with my goal of analyzing cart abandonment.
+  - These changes allowed me to focus on whether a customer took action at all, rather than how often — which aligned better with my goal of analyzing cart abandonment.
 
 - **Data analysis:** In Excel, I used formulas to calculate both the cart abandonment rate and the drop-off rate. To support these calculations, I added custom columns that simplified the logic and made the formulas easier to apply and interpret.
   - I also used for loops in Python to organize and categorize customer behavior more clearly. This allowed me to take a different approach to analyzing abandonment, specifically by checking which customer groups (Target, Loyal, or Untargeted) were more likely to abandon their carts. This method helped me break the data into more meaningful segments and draw more insightful conclusions.
